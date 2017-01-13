@@ -45,7 +45,7 @@
             ### 1. Do I need to register a JS Bin account?
 
             We highly recommend you to register an account,
-            but it is okay even you don't want to register an account.
+            but it is okay even you not want to register an account.
             You still can use JS Bin without registration.
             The only limitation is you need to self-tracking all your JS Bin URLs.
 
@@ -57,96 +57,106 @@
 
             @TODO: Exmplain a bit
 
+            ### 4. Clone JS Bin
+
+            @TODO: Explain a bit
+
             ## Quiz
 
             ### Question 1
+            Clone from JS Bin link at below.
+            Write JavaScript to popup message to user when clicking on "Clap" box.
 
-            Build TWO buttons with named as 'LOVE' and 'HATE' in JS Bin.
+            Required: Must using DOM EventListener approach.
 
-            Reference:
-            - [http://www.w3schools.com/tags/tag_button.asp](http://www.w3schools.com/tags/tag_button.asp)
+            JS Bin link: [http://jsbin.com/semadi/edit?html,js,output](http://jsbin.com/semadi/edit?html,js,output)
+
+            References:
+            - [http://www.w3schools.com/jsref/met_document_queryselector.asp](http://www.w3schools.com/jsref/met_document_queryselector.asp)
+            - [http://www.w3schools.com/js/js_htmldom_eventlistener.asp](http://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+            - [http://www.w3schools.com/js/js_popup.asp](http://www.w3schools.com/js/js_popup.asp)
 
             ```
             // Question 1 answer
-            // Paste your JS Bin URL in here.
             ```
 
             ### Question 2
-            Repeat what you did in Question 1.
-            This time you needs to link your page with Bootstrap CSS.
-            After that, you had to styling your button to default button style.
+            Clone from JS Bin link at below.
+            We expect when user press "A" on keyboard will add `playing` class
+            to 'key' element.
 
-            Tips: You can use CDN.
+            Tips: Use querySelector to select "data-key" attribute.
 
-            Reference:
-            - [http://getbootstrap.com/getting-started/](http://getbootstrap.com/getting-started/)
-            - [http://getbootstrap.com/css/#buttons](http://getbootstrap.com/css/#buttons)
+            JS Bin link: [http://jsbin.com/jawokin/edit?html,js,output](http://jsbin.com/jawokin/edit?html,js,output)
+
+            References:
+            - [https://developer.mozilla.org/en/docs/Web/Events/keydown](https://developer.mozilla.org/en/docs/Web/Events/keydown)
+            - [http://unixpapa.com/js/testkey.html](http://unixpapa.com/js/testkey.html)
+            - [https://css-tricks.com/almanac/selectors/a/attribute/](https://css-tricks.com/almanac/selectors/a/attribute/)
 
             ```
-            Question 2 answer
+            // Question 2 answer
             ```
 
             ### Question 3
+            In Question 2, we know key code `65` is belong to "A" button on keyboard.
+            What is key code for "S" and "D" buttons?
 
-            Repeat what you did in Question 2.
-            By manipulate DOM, change your buttons style.
-            - Change 'YES' button to primary button style.
-            - Change 'No' button to danger button style.
-
-            Tips: You needs to define `id` attribute to your buttons.
-
-            Reference:
-
-            - [http://www.w3schools.com/tags/ref_standardattributes.asp](http://www.w3schools.com/tags/ref_standardattributes.asp)
-            - [http://getbootstrap.com/css/#buttons](http://getbootstrap.com/css/#buttons)
-            - [http://www.w3schools.com/jsref/met_document_getelementbyid.asp](http://www.w3schools.com/jsref/met_document_getelementbyid.asp)
-            - [http://www.w3schools.com/jsref/prop_element_classlist.asp](http://www.w3schools.com/jsref/prop_element_classlist.asp)
+            Tips: Check with 'testkey' page in references at Question 2.
 
             ```
             // Question 3 answer
             ```
 
             ### Question 4
+            Clone from JS Bin link at below.
+            You need fill in the blank inside `playSound` function.
+            We expect when user press on keyboard,
+            the sound will come out from speaker,
+            and user will know which sound is playing.
 
-            Repeat what you did in Question 3.
-            Popup message when user click on the buttons.
+            Required:
+            1. Query `data-key` with `querySelector` function.
+            2. Add `playing` class to key element, like what you did in Question 2.
+            3. If no key match to audio, do nothing.
+            4. Play out sound.
 
-            Require: Events must assign via DOM.
-
-            Reference:
-
-            - [http://www.w3schools.com/js/js_popup.asp](http://www.w3schools.com/js/js_popup.asp)
-            - [http://www.w3schools.com/js/js_htmldom_events.asp](http://www.w3schools.com/js/js_htmldom_events.asp)
-
-            ```
-            // Question 4 answer
-            ```
-
-            ### Question 5
-            Repeat what you did in Question 4.
-            Add a simple audio element on your page.
-            After that, contol audio playback with buttons you had created.
-
-            Use this audio: [boom.wav](https://raw.githubusercontent.com/wesbos/JavaScript30/master/01%20-%20JavaScript%20Drum%20Kit/sounds/boom.wav)
+            JS Bin link: [http://jsbin.com/yafiyi/edit?html,js,output](http://jsbin.com/yafiyi/edit?html,js,output)
 
             Reference:
             - [https://developer.mozilla.org/en/docs/Web/HTML/Element/audio](https://developer.mozilla.org/en/docs/Web/HTML/Element/audio)
             - [http://www.w3schools.com/tags/av_met_play.asp](http://www.w3schools.com/tags/av_met_play.asp)
 
             ```
+            // Question 4 answer
+            ```
+
+            ### Question 5
+            If you done Question 4 correctly,
+            you found out when the sound finish play,
+            the 'orange' border still remain.
+            Why?
+
+            ```
             // Question 5 answer
             ```
 
             ### Question 6
-            @TODO: Trigger keyboard event
+            Clone from JS Bin link at below.
+            Remove 'orange' border after transition end.
 
-            ### Question 7
-            @TODO: Guide on use data attribute
+            Tips: Using `querySelectorAll` to find all key elements.
 
-            ### Question 8
-            @TODO: Guide on select all elements with class
+            JS Bin link: [http://jsbin.com/siloda/edit?html,js,output](http://jsbin.com/siloda/edit?html,js,output)
+
+            References:
+            - [http://www.w3schools.com/jsref/met_document_queryselectorall.asp](http://www.w3schools.com/jsref/met_document_queryselectorall.asp)
+            - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+            - [http://www.w3schools.com/jsref/event_transitionend.asp](http://www.w3schools.com/jsref/event_transitionend.asp)
 
             ### Challenge
+            @TODO: Add more sounds
+
         </script>
         <div id="kajero"></div>
         <script type="text/javascript" src="http://www.joelotter.com/kajero/dist/bundle.js"></script>
