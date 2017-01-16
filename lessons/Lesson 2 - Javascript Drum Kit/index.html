@@ -126,17 +126,20 @@
 
             Use `<H1><P><HR><B><U><EM>` tags to make a page that looks like the following:
 
-            <h1>News</h1>
-            <em>January 20th</em>
-            <P><B>Donald Trump tries to kiss baby, <u>gets peed on</u></B></P>
-            <P>In a sign of things to come, Donald Trump's inaguration took a turn for the worse when a future voter forcibly expressed an opinion.</P>
-            <P><em>more...</em></P>
-            <hr />
-            <em>January 19th</em>
-            <P><B>Jeff Goldblum goes to space</B></P>
-            <P>The Independence Day star will be one of the first aboard Virgin Galactic's maiden flight.</P>
-            <P><em>more...</em></P>
-            <hr />
+            ![Question 1 example](https://github.com/imkven/javascript-bootcamp/raw/master/lessons/Lesson%202%20-%20Javascript%20Drum%20Kit/img/question-1.png)
+
+            Hints: You can learn more tags from here: [http://www.w3schools.com/tags/default.asp](http://www.w3schools.com/tags/default.asp)
+
+            References:
+            - [http://www.w3schools.com/tags/tag_hn.asp](http://www.w3schools.com/tags/tag_hn.asp)
+            - [http://www.w3schools.com/tags/tag_p.asp](http://www.w3schools.com/tags/tag_p.asp)
+            - [http://www.w3schools.com/tags/tag_hr.asp](http://www.w3schools.com/tags/tag_hr.asp)
+            - [http://www.w3schools.com/tags/tag_b.asp](http://www.w3schools.com/tags/tag_b.asp)
+            - [http://www.w3schools.com/tags/tag_em.asp](http://www.w3schools.com/tags/tag_em.asp)
+
+            ```
+            // Question 1 answer
+            ```
 
             ### Question 2
             Clone from JS Bin link at below.
@@ -147,12 +150,19 @@
 
             JS Bin link: [http://jsbin.com/fiyakuwivi/edit?html,output](http://jsbin.com/fiyakuwivi/edit?html,output)
 
+            References:
+            - [http://www.w3schools.com/tags/ev_onclick.asp](http://www.w3schools.com/tags/ev_onclick.asp)
+
+            ```
+            // Question 2 answer
+            ```
+
             ### Question 3
             Clone from JS Bin link at below.
 
             Repeat what you did in Question 2, but now write use document.queryselector() and element.addEventListener() to do the same thing.
 
-            Hint: the following two ways of writing Javascript have the same outcome:
+            Hint: the following ways of writing Javascript have the same outcome:
 
             ```
             var ele = document.queryselector(".classname");
@@ -177,15 +187,16 @@
             - [http://www.w3schools.com/js/js_popup.asp](http://www.w3schools.com/js/js_popup.asp)
 
             ```
-            // Question 1 answer
+            // Question 3 answer
             ```
 
-            ### Question 2
+            ### Question 4
             Clone from JS Bin link at below.
-            We expect when user press "A" on the keyboard will add a `playing` class
-            to 'key' element.
 
-            Tips: Use querySelector to select "data-key" attribute.
+            We expect when user press "A" on the keyboard will add a `playing` class
+            to matched key code (e.g. 'data-key') element.
+
+            Hint: Use querySelector to select "data-key" attribute. Key code for "A" is '65'.
 
             JS Bin link: [http://jsbin.com/jawokin/edit?html,js,output](http://jsbin.com/jawokin/edit?html,js,output)
 
@@ -195,33 +206,34 @@
             - [https://css-tricks.com/almanac/selectors/a/attribute/](https://css-tricks.com/almanac/selectors/a/attribute/)
 
             ```
-            // Question 2 answer
-            ```
-
-            ### Question 3
-            In Question 2, we know key code `65` belongs to "A" button on the keyboard.
-            What is key code for "S" and "D" buttons?
-
-            Tips: Check with 'testkey' page in references at Question 2.
-
-            ```
-            // Question 3 answer
-            ```
-
-            ### Question 4
-            If you did Question 2 correctly,
-            you found out the 'orange' border will never disappear.
-            Why?
-
-            ```
             // Question 4 answer
             ```
 
             ### Question 5
+            In Question 4, we know key code `65` belongs to "A" button on the keyboard.
+            What is key code for "S" and "D" buttons?
+
+            Hint: Check with 'testkey' page in references at Question 2.
+
+            ```
+            // Question 5 answer
+            ```
+
+            ### Question 6
+            If you did Question 5 correctly,
+            you found out the 'orange' border will never disappear.
+            Why?
+
+            ```
+            // Question 6 answer
+            ```
+
+            ### Question 7
             Clone from JS Bin link at below.
+
             Remove 'orange' border after transition end.
 
-            Bonus: Use `querySelectorAll` to find all key elements.
+            Bonus: Use `querySelectorAll` to find all elements.
 
             JS Bin link: [http://jsbin.com/siloda/edit?html,js,output](http://jsbin.com/siloda/edit?html,js,output)
 
@@ -231,17 +243,18 @@
             - [http://www.w3schools.com/jsref/event_transitionend.asp](http://www.w3schools.com/jsref/event_transitionend.asp)
 
             ```
-            // Question 5 answer
+            // Question 7 answer
             ```
 
-            ### Question 6
+            ### Question 8
             Clone from JS Bin link at below.
+
             You need fill in the blank inside `playSound` function.
             We expect when user press on the keyboard,
             the sound will come out from the speaker,
             and the user will know which sound is playing.
 
-            Tips:
+            Hints:
             1. Query `data-key` with `querySelector` function.
             2. Show "orange" border when user click on specify button.
             3. If user click on undefined key, you can just ignore it (nothing will happen).
@@ -253,13 +266,13 @@
             - [http://www.w3schools.com/tags/av_met_play.asp](http://www.w3schools.com/tags/av_met_play.asp)
 
             ```
-            // Question 6 answer
+            // Question 8 answer
             ```
 
             ### Challenge
-            It's time to make JavaScript Drum Kit more complete.
-            I will provide more sounds at below, and you needs to
-            integrate all into your drum kit.
+            You have learned enough to builds an interactive music instrument app.
+            We provide more sounds at below, and you needs to
+            integrate all into your code.
 
             - _Boom:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/boom.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/boom.wav)
             - _Clap:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/clap.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/clap.wav)
@@ -270,6 +283,10 @@
             - _Snare:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/snare.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/snare.wav)
             - _Tink:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tink.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tink.wav)
             - _Tom:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tom.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tom.wav)
+
+            ```
+            // Challenge answer
+            ```
 
         </script>
         <div id="kajero"></div>
