@@ -10,35 +10,37 @@
             ---
             title: "Lesson 2: Javascript Drum Kit"
             author: "Kven Ho"
-            created: "Thu Jan 12 2017 12:39:30 GMT+0800 (MYT)"
+            created: "Mon Jan 16 2017 10:02:24 GMT+0800 (MYT)"
             original:
                 title: "Lesson 2: Javascript Drum Kit"
-                url: "file:///Users/kvenho/Documents/javascript-bootcamp/lessons/Lesson%202%20-%20Javascript%20Drum%20Kit/index.html"
+                url: "http://www.joelotter.com/kajero/?id=4ccfd4b90789ccadfae791eae7552b68"
             show_footer: true
             ---
 
             ## Introduction
 
-            In past lesson, we learned some basic programming skill with Kajero,
-            but it not good enough because Kajero can not handle
-            [HTML DOM](http://www.w3schools.com/js/js_htmldom.asp).
-            JavaScript needs DOM to access and change all the elements of an HTML document.
+            In the first lesson, we learned some basic Javascript and we used Kajero for all the examples.
+            For today's lesson, we're going to show you how Javascript works within a real web page. This means we need to look at HTML - the "language" of the web.
+            This also means we need to use a new tool, JSBin, that can do a few things Kajero can't.
 
-            Therefore, in this lesson, we will focus on guiding you on:
+            Therefore, in this lesson, we will focus on teaching you:
 
-            - Make your hand dirty to create few HTML elements.
-            - Manipulate HTML DOM with Javascript.
-            - Using HTML DOM EventListener.
+            - Basics of JSBin
+            - Basics of HTML
+            - Getting your hand dirty to create few HTML elements
+            - Learning about the way Javascript "sees" HTML in the browser
+            - Manipulating HTML with Javascript.
+            - Learning about what happens when the user interacts with the page
 
-            In the end of the lesson, we will challenge you to build a JavaScript Drum Kit.
-            It is not hard to build when you know manipulate DOM with JavaScript.
+            In the end of the lesson, we will challenge you to build an interactive music instrument app.
+            You'll be surprised at how easy it is!
 
             ## Using JS Bin
 
-            Since Kajero can not handle DOM, therefore we need help from
+            Since Kajero doesn't really support manipulating HTML very well,  we need help from
             another JavaScript hero - [JS Bin](https://jsbin.com/?html,css,js,output).
             It is a very handy tool, you can test your code in here.
-            In addition, this also is the best tool to learning how to code for the web.
+            In addition, this also is one of the best tools for learning how to code for the web.
 
             > JS Bin: [https://jsbin.com/](https://jsbin.com/?html,css,js,output)
 
@@ -47,7 +49,7 @@
             We highly recommend you to register an account,
             but it is okay even you do not want to register an account.
             You still can use JS Bin without registration.
-            The only limitation is you need to self-tracking all your JS Bin URLs.
+            The only limitation is you'll need to keep track of all your JS Bin URLs.
 
             ### 2. HTML tab
 
@@ -61,13 +63,101 @@
 
             @TODO: Explain a bit
 
+            ## HTML - the HyperText Markup Language
+
+            The most basic language of the web is called HTML. It is a simple "language" in that it has only a few basic rules.
+            HTML files are just plain text, but with "tags" that are used to format the text and break it into section.
+            A tag looks like this `<tag>stuff here</tag>` or `<tag />`. The first type is a matched tag, and applies the meaning of the tag to whatever is between.
+            For example, the `<P>text here</P>` tag will put "text here" in its own paragraph (p for paragraph).
+
+            The second format is for tags that have meaning on their own. For example `<hr />` will put a horizontal line between paragraphs
+            <hr /> like that.
+
+            If you know about 20 tags, you can read almost any web page "code". Some of the basic ones are:
+            ```
+            <P></P> - paragraph
+            <H1></H1> - 1st level heading (you can do H1, H2, H3, H4, H5)
+            <B></B> - Bold
+            <U></U> - Underline
+            <EM></EM> - Italics
+            <I></I> - Also italics, but often has other purposes, like Icons
+            <IMG /> - Display an image
+            <A>link text</A> - Create a link
+            <BUTTON>button text</BUTTON> - Create a button
+            <LI>item</LI> - list item.
+            <UL><LI>item one</LI><LI>item two</LI></UL> - a "bulleted list"
+            <OL><LI>item one</LI></OL> - a "numbered list"
+            <BR /> Line break
+            <DIV></DIV> A "wrapper" that is used heavily with javascript
+            ```
+
+            The tag, plus the information within the tag, is called an "element".
+
+            The next thing to know is that inside a tag you will often see more than just the name. For example:
+            `<IMG src='path_to_image.jpg' alt='Text name of image' />`
+            In the above, "src" means the "source" file of the image, and "alt" is the text you'll see when you hover your mouse over the image, or if it fails to load, or if you're using accessibility tools. "src" and "alt" are called properties, or attributes.
+
+            The most important tag properties that you'll be using when you code Javascript are "id" and "class".
+
+            "id" is a unique identifier - for example `<div id="unique"></div>` can be the only element on the page with id=unique.
+
+            "class" is a non-unique identifier, there can be many elements with the same class. For example, `<div class="button">add me</div>` is often used to indicate that the text inside should be rendered as a button.
+
+            There can be multiple classes per tag. IE `<div class="button large"></div>` vs `<div class="button small"></div>`
+
+            Classes and identifiers become very important when working with Javascript, because you can use them to find and manipulate individual or groups of elements within a page.
+
+            There's one more special tag called `<style></style>` which lets us use another language called CSS (Cascading Style Sheets) to change how elements appear on the page. We will explore CSS in the next lesson. For now, the important thing to know is that classes and ids are also used heavily by CSS. It's the combination of CSS and Javascript that makes web pages "interactive".
+
             ## Quiz
 
             ### Question 1
-            Clone from JS Bin link at below.
-            Write JavaScript to pop up message to the user when clicking on "Clap" box.
+            Create a new JSBin page.
 
-            Required: Must using DOM EventListener approach.
+            Use `<H1><P><HR><B><U><EM>` tags to make a page that looks like the following:
+
+            <h1>News</h1>
+            <em>January 20th</em>
+            <P><B>Donald Trump tries to kiss baby, <u>gets peed on</u></B></P>
+            <P>In a sign of things to come, Donald Trump's inaguration took a turn for the worse when a future voter forcibly expressed an opinion.</P>
+            <P><em>more...</em></P>
+            <hr />
+            <em>January 19th</em>
+            <P><B>Jeff Goldblum goes to space</B></P>
+            <P>The Independence Day star will be one of the first aboard Virgin Galactic's maiden flight.</P>
+            <P><em>more...</em></P>
+            <hr />
+
+            ### Question 2
+            Clone from JS Bin link at below.
+
+            Add the class "sound" to the element that contains the word "clap". If you are successful, the box should change when the mouse move into and out of it.
+
+            Use the "onClick" property to write Javascript that pops up a message to the user when clicking in the "Clap" box.
+
+            JS Bin link: [http://jsbin.com/fiyakuwivi/edit?html,output](http://jsbin.com/fiyakuwivi/edit?html,output)
+
+            ### Question 3
+            Clone from JS Bin link at below.
+
+            Repeat what you did in Question 2, but now write use document.queryselector() and element.addEventListener() to do the same thing.
+
+            Hint: the following two ways of writing Javascript have the same outcome:
+
+            ```
+            var ele = document.queryselector(".classname");
+            ele.addEventListener("click", prompt("what is your name"));
+            ```
+            and
+            ```
+            document.queryselector(".classname").addEventListener("click", prompt("what is your name"));
+            ```
+            and
+            ```
+            document.queryselector(".classname").addEventListener("click", function() {
+                prompt("what is your name");
+            });
+            ```
 
             JS Bin link: [http://jsbin.com/semadi/edit?html,js,output](http://jsbin.com/semadi/edit?html,js,output)
 
@@ -121,7 +211,7 @@
             Clone from JS Bin link at below.
             Remove 'orange' border after transition end.
 
-            Tips: Using `querySelectorAll` to find all key elements.
+            Bonus: Use `querySelectorAll` to find all key elements.
 
             JS Bin link: [http://jsbin.com/siloda/edit?html,js,output](http://jsbin.com/siloda/edit?html,js,output)
 
@@ -138,12 +228,13 @@
             Clone from JS Bin link at below.
             You need fill in the blank inside `playSound` function.
             We expect when user press on the keyboard,
-            the sound will come out from the speaker.
+            the sound will come out from the speaker,
+            and the user will know which sound is playing.
 
-            Required:
+            Tips:
             1. Query `data-key` with `querySelector` function.
-            3. If no key matches to 'audio' element, do nothing.
-            4. Play out the sound.
+            2. Show "orange" border when user click on specify button.
+            3. If user click on undefined key, you can just ignore it (nothing will happen).
 
             JS Bin link: [http://jsbin.com/yafiyi/edit?html,js,output](http://jsbin.com/yafiyi/edit?html,js,output)
 
@@ -156,7 +247,19 @@
             ```
 
             ### Challenge
-            @TODO: Add more sounds
+            It's time to make JavaScript Drum Kit more complete.
+            I will provide more sounds at below, and you needs to
+            integrate all into your drum kit.
+
+            - _Boom:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/boom.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/boom.wav)
+            - _Clap:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/clap.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/clap.wav)
+            - _Hihat:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/hihat.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/hihat.wav)
+            - _Kick:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/kick.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/kick.wav)
+            - _Openhat:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/openhat.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/openhat.wav)
+            - _Ride:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/ride.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/ride.wav)
+            - _Snare:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/snare.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/snare.wav)
+            - _Tink:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tink.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tink.wav)
+            - _Tom:_ [https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tom.wav](https://github.com/wesbos/JavaScript30/raw/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tom.wav)
 
         </script>
         <div id="kajero"></div>
