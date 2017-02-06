@@ -9,7 +9,7 @@
         <script type="text/markdown" id="kajero-md">
             ---
             title: "Lesson 3: Bootstrap CSS"
-            author: "Kven Ho"
+            author: "Kel & Kven"
             created: "Thu Jan 19 2017 12:23:23 GMT+0800 (MYT)"
             original:
                 title: "Lesson 3: Bootstrap CSS"
@@ -27,7 +27,7 @@
 
             ![HTML vs CSS](https://github.com/imkven/javascript-bootcamp/raw/master/lessons/Lesson%203%20-%20Bootstrap%20CSS/img/html-vs-css.png)
 
-            In this lesson, you will learning about:
+            In this lesson, you will learn about:
 
             - Basics of CSS
             - Basics of Sass, a preprocessor for CSS
@@ -35,11 +35,12 @@
             - Integrate Bootstrap to your project, a web framework built with bunch of features
             - Integrate widespread Bootstrap components in your page
 
-            @TODO: Challenge...
+            In end of the lesson, we will challenge you to integrate Bootstrap to
+            interactive music instrument app that you created on Lesson 2.
 
             ## CSS
 
-            A CSS rule-set consists of a selector and a declaration block.
+            A CSS ruleset consists of a selector and a declaration block.
 
             ```
             .flat {
@@ -51,16 +52,16 @@
             Selector is same concept with `querySelector` we learned in last lesson.
             In example, `.flat` is a selector. It declared to select all HTML elements that contain `flat` class.
 
-            The curly brackets is declaration block.
+            The curly brackets are declaration block.
             We declare how the element will look like inside this block.
             Remember every declaration must end with a semicolon.
-            In example, I define background color to orange for every HTML elements contain `flat` class.
+            In the example, I define background color to orange for every HTML elements contain `flat` class.
 
             ## Sass
 
             When a project goes larger, CSS stylesheet will get larger too.
             It brings up complexity and difficult to maintain.
-            We need preprocessor to solve this problem.
+            We need a CSS preprocessor to solve this problem.
 
             Sass (Syntactically Awesome StyleSheets) is one of most popular CSS preprocessor.
             Sass help to convert your programmable CSS code to pure CSS stylesheet.
@@ -74,7 +75,7 @@
 
             ## Responsive Web Design (RWD)
 
-            RWD is very simple concept.
+            RWD is a very simple concept.
             Its focus on makes your web page looking well on all devices,
             like desktop, tablet, and phone.
 
@@ -85,19 +86,18 @@
 
             Pictures at below showing [Bootstrap website](http://getbootstrap.com/)
             look like when the user in iPhone 6.
-            Bootstrap framework is RWD-ready.
+            Bootstrap framework is ***RWD-ready***.
 
             ![Group up menu 1](https://github.com/imkven/javascript-bootcamp/raw/master/lessons/Lesson%203%20-%20Bootstrap%20CSS/img/group-menu-1.png)
             ![Group up menu 2](https://github.com/imkven/javascript-bootcamp/raw/master/lessons/Lesson%203%20-%20Bootstrap%20CSS/img/group-menu-2.png)
 
             ## Bootstrap
 
-            ```
-            Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web. - From Bootstrap itself
-            ```
+            > "Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web." - From Bootstrap itself
 
             Doesn't make much sense eh? Well, a framework is used to make the developer life easier.
             So, whenever you opt to use a framework, you are expecting it to do some heavyliftings for you.
+
             In Bootstrap, they got tons of [components](http://getbootstrap.com/components/).
             For example, [navbar](http://getbootstrap.com/components/#navbar) is very common in web application these days (Facebook has it).
             By using the components provided by Bootstrap, you are saving the time used to build the components from scratch and ultimately speed up the development speed.
@@ -105,11 +105,14 @@
             "Wait a minute! if everyone is using the same components from Bootstrap, then every website will look alike.", you said.
             Worry not. You can always tinker with the CSS or JavaScript.
             Updating CSS will change the style of the Bootstrap component.
+
             And calling JavaScript functions provided for each components, you will have different behaviors for the component.
+
 
             ## JQuery
 
             Another option to speed up the development is using Jquery - a JavaScript library that used to simplify JavaScript programming.
+            
             If you are good in JavaScript programming and framework is not neccessary for your web application development, then Jquery might be your thing. Jquery consists of many functions which help you achieve the same thing as you will by using JavaScript. Just that by using Jquery, it will be much neater and shorter. For example, if you wanna change some background color.
 
             In Jquery, you will do
@@ -135,7 +138,7 @@
             ### Question 1
 
             Start your new JS Bin and inject Bootstrap into your HTML page.
-            You simple insert latest Bootstrap with 'Add library' menu.
+            You simply insert the latest Bootstrap with 'Add library' menu.
 
             Note: For our case, injected `<script>` and `<link>` tags must inside the `<head>` tag.
 
@@ -145,9 +148,10 @@
 
             ### Question 2
 
-            Clone JS Bin from link below.
-            As you can see, 'Column A' and 'Column B' are not in same row.
-            Make some change in grid, expected outcome 'Column A' and 'Column B' should in same row.
+            Clone JS Bin from the link below.
+            As you can see, 'Column A' and 'Column B' are not in the same row.
+            Make some change in the grid system, expected outcome 'Column A'
+            and 'Column B' should in the same row.
 
             JS Bin: [http://jsbin.com/pibukes/2/edit?html,output](http://jsbin.com/pibukes/2/edit?html,output)
 
@@ -160,7 +164,7 @@
 
             ### Question 3
 
-            Clone JS Bin from link below.
+            Clone JS Bin from the link below.
             Bootstrap provided 2 class of containers to wrap site contents.
             Replace `container` to `container-fluid` and see the different.
             After you replaced, paste your JS Bin URL to answer block.
@@ -182,7 +186,7 @@
 
             Create your own JS Bin.
             Random choose few components from Bootstrap document and paste into your page.
-            No need care about contents, main purpose of this question is make your hand dirty.
+            No need care about contents, the main purpose of this question is to make your hand dirty.
 
             Bootstrap Document: [http://getbootstrap.com/components/](http://getbootstrap.com/components/).
 
@@ -192,9 +196,9 @@
 
             ### Question 5
 
-            Clone JS Bin from link below.
+            Clone JS Bin from the link below.
             We already provided modal.
-            You need to make sure modal popup when page loaded.
+            You need to make sure modal popup when the page loaded.
 
             JS Bin: [http://jsbin.com/zebufay](http://jsbin.com/zebufay/edit?html,output)
 
@@ -228,15 +232,14 @@
 
             ### Question 8
 
-            Dropdown is heavy use in web development.
-            It use to group similar items into menu.
-
             Create your own JS Bin.
-            Create dropdown menu like the picture below.
+            The dropdown menu is heavy use in web development.
+            It uses to group similar items into a menu.
+            Create a dropdown menu like the picture below.
 
             ![https://raw.githubusercontent.com/imkven/javascript-bootcamp/master/lessons/Lesson%203%20-%20Bootstrap%20CSS/img/dropdown.png](https://raw.githubusercontent.com/imkven/javascript-bootcamp/master/lessons/Lesson%203%20-%20Bootstrap%20CSS/img/dropdown.png)
 
-            References
+            References:
             - [http://getbootstrap.com/javascript/#dropdowns](http://getbootstrap.com/javascript/#dropdowns)
             - [http://getbootstrap.com/components/#dropdowns-divider](http://getbootstrap.com/components/#dropdowns-divider)
 
@@ -246,9 +249,30 @@
 
             ### Question 9
 
-            @TODO: Alert
+            Create your own JS Bin.
+            Alert use to telling user somethings.
+            Sometimes, it giving hints to the user for next action.
+            Create an alert like the picture below.
+
+            ![https://github.com/imkven/javascript-bootcamp/raw/master/lessons/Lesson%203%20-%20Bootstrap%20CSS/img/alert.png](https://github.com/imkven/javascript-bootcamp/raw/master/lessons/Lesson%203%20-%20Bootstrap%20CSS/img/alert.png)
+
+            Reference:
+            - [http://getbootstrap.com/components/#alerts](http://getbootstrap.com/components/#alerts)
+            - [http://getbootstrap.com/javascript/#alerts](http://getbootstrap.com/javascript/#alerts)
+
+            ```
+            Question 9 answer
+            ```
 
             ### Challenge
+
+            Create your own JS Bin.
+            In Lesson 2, you have created an interactive music instrument app.
+            Now, use what you are learned in this lesson make the app more beautiful.
+
+            ```
+            Challenge answer
+            ```
         </script>
         <div id="kajero"></div>
         <script type="text/javascript" src="http://www.joelotter.com/kajero/dist/bundle.js"></script>
