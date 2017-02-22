@@ -1,7 +1,7 @@
 ## Table of Lessons
 
 ### Lesson 1 - Before we start
-[Start](/lessons/Lesson 1 - Before we start)
+[Start](./lessons/Lesson 1 - Before we start)
 
 ### Lesson 2 - Javascript Drum Kit
 
